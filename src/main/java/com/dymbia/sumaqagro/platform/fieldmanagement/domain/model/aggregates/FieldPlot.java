@@ -21,10 +21,11 @@ public class FieldPlot extends AuditableAbstractAggregateRoot <FieldPlot> {
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 150)
     private String region;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false, length = 30)
     private PlotStatus status;
 
     @Column(nullable = false, precision = 10, scale = 2)

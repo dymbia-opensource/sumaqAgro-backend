@@ -11,7 +11,7 @@ public record RegisterFieldPlotCommand(Long ownerUserId, String name, String reg
             throw new IllegalArgumentException("field.plot.error.name.notBlank");
         if (region==null||region.isBlank())
             throw new IllegalArgumentException("field.plot.error.region.notBlank");
-        if (declaredAreaHectares==null||declaredAreaHectares.signum() <= 0)
+        if (declaredAreaHectares==null||declaredAreaHectares.signum() < 0)
             throw new IllegalArgumentException("field.plot.error.area.invalid");
     }
 }
