@@ -10,10 +10,14 @@ import java.math.BigDecimal;
 @Getter
 @Entity
 @Table(uniqueConstraints = {
-        @UniqueConstraint(columnNames = {"owner_user_id", "name"},name=FieldPlot.OWNER_USER_ID_NAME_UNIQUE_CONSTRAIN)
+        @UniqueConstraint(columnNames = {"owner_user_id", "name"},name=FieldPlot.OWNER_USER_ID_NAME_UNIQUE_CONSTRAINT)
 })
 public class FieldPlot extends AuditableAbstractAggregateRoot <FieldPlot> {
-    public static final String OWNER_USER_ID_NAME_UNIQUE_CONSTRAIN = "uk_owner_user_id_name";
+    public static final String OWNER_USER_ID_NAME_UNIQUE_CONSTRAINT = "uk_owner_user_id_name";
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false)
     private Long ownerUserId;
