@@ -15,7 +15,7 @@ import java.time.Instant;
 public abstract class AuditableAbstractAggregateRoot<T extends AuditableAbstractAggregateRoot<T>> extends AbstractAggregateRoot<T>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @CreatedDate
     @Column(nullable=false,updatable=false)
