@@ -1,4 +1,4 @@
-package com.dymbia.sumaqagro.platform.fieldmanagement.application.commandservices;
+package com.dymbia.sumaqagro.platform.fieldmanagement.application.queryservices;
 
 import com.dymbia.sumaqagro.platform.fieldmanagement.domain.model.aggregates.FieldPlot;
 import com.dymbia.sumaqagro.platform.fieldmanagement.domain.model.queries.GetAllFieldPlotsByOwnerUserIdQuery;
